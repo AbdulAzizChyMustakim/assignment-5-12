@@ -9,32 +9,180 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-gray-100 font-hind">
+<body class="bg-gray-100 font-hind ">
 
-  <!-- Navbar -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
-    <div class="flex items-center gap-2">
-      <img src="assets/logo.png" alt="logo" class="w-8 h-8">
-      <span class="font-bold text-xl text-emerald-800">Emergency Directory</span>
+ <!-- Navbar -->
+<nav class="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 py-3 sm:py-4 bg-white shadow gap-3 sm:gap-0">
+  <!-- Left (Logo + Name) -->
+  <div class="flex items-center gap-2">
+    <img src="assets/logo.png" alt="logo" class="w-8 h-8">
+    <span class="font-bold text-lg sm:text-xl text-emerald-800">Emergency Directory</span>
+  </div>
+
+  <!-- Right (Counts) -->
+  <div class="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-4 items-center">
+    <span class="px-4 py-1 sm:px-5 sm:py-2 bg-emerald-100 font-bold rounded-full cursor-pointer text-sm sm:text-base">
+      <span id="heartCount">0 ❤️</span>
+    </span>
+    <span class="px-4 py-1 sm:px-5 sm:py-2 bg-emerald-100 font-bold rounded-full cursor-pointer text-sm sm:text-base">
+      <span id="coinCount">100 💰</span>
+    </span>
+    <span class="px-4 py-1 sm:px-5 sm:py-2 bg-green-500 text-white font-semibold rounded-full cursor-pointer text-sm sm:text-base">
+      <span id="copyCount">2 Copy</span>
+    </span>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="min-h-64 bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-900 text-white flex flex-col justify-center items-center text-center px-4 py-8">
+  <img src="assets/logo-dark.png" class="w-14 sm:w-16 mb-2">
+  <h1 class="text-2xl sm:text-3xl font-bold">Emergency Service Directory</h1>
+  <p class="mt-2 text-base sm:text-lg max-w-2xl">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+</section>
+
+<section class="max-w-7xl mx-auto p-4 grid lg:grid-cols-12 gap-6">
+  
+  <!-- Left: Cards -->
+  <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between">
+        <img class="w-16" src="assets/emergency.png" alt="">
+        <span>♡</span>
+      </div>
+      <h3 class="font-semibold mt-2">National Emergency Number</h3>
+      <p class="text-gray-500 text-sm">National Emergency</p>
+      <p class="text-2xl font-bold mt-1">999</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">All</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
     </div>
-    <div class="flex gap-6 items-center">
-      <span class="px-5 py-2 bg-emerald-100 font-bold rounded-full cursor-pointer"> <span id="heartCount">0 ❤️</span></span>
-      <span class="px-5 py-2 bg-emerald-100 font-bold  rounded-full cursor-pointer"> <span id="coinCount">100 💰</span></span>
-      <span class="px-5 py-2 bg-green-500 text-white font-semibold rounded-full cursor-pointer"> <span id="copyCount">2 Copy</span></span>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/police.png"><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Police Helpline Number</h3>
+      <p class="text-gray-500 text-sm">Police</p>
+      <p class="text-2xl font-bold mt-1">999</p>
+      <span class="bg-gray-100 px-2 py-0.5  w-[fit-content] rounded text-xs">Help</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="h-64 bg-gradient-to-r from-emerald-900 
-  via-emerald-700 
-  to-emerald-900  text-white flex flex-col justify-center items-center">
-    <img src="assets/logo-dark.png" class="w-16 mb-2">
-    <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
-    <p class="mt-2 text-lg">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
-  </section>
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/fire-service.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Fire Service</h3>
+      <p class="text-gray-500 text-sm">FS</p>
+      <p class="text-2xl font-bold mt-1">999</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Fire</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
 
- 
+    <!-- Card 4 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/ambulance.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Ambulance</h3>
+      <p class="text-gray-500 text-sm">Ambulance</p>
+      <p class="text-2xl font-bold mt-1">999</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Medical</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
 
+    <!-- Card 5 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/Bangladesh-Railway.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Railway Helpline</h3>
+      <p class="text-gray-500 text-sm">RH</p>
+      <p class="text-2xl font-bold mt-1">131</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Travel</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/emergency.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Anti-Corruption</h3>
+      <p class="text-gray-500 text-sm">AC</p>
+      <p class="text-2xl font-bold mt-1">106</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Gov</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/emergency.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Gas Emergency</h3>
+      <p class="text-gray-500 text-sm">GE</p>
+      <p class="text-2xl font-bold mt-1">16999</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Utility</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/emergency.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Power Emergency</h3>
+      <p class="text-gray-500 text-sm">PE</p>
+      <p class="text-2xl font-bold mt-1">121</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Utility</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm">📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between"><img class="w-16" src="assets/emergency.png" alt=""><span>♡</span></div>
+      <h3 class="font-semibold mt-2">Women & Child</h3>
+      <p class="text-gray-500 text-sm">WC</p>
+      <p class="text-2xl font-bold mt-1">109</p>
+      <span class="bg-gray-100 px-2 py-0.5 w-[fit-content] rounded text-xs">Support</span>
+      <div class="mt-4 flex gap-2">
+        <button class="flex-1 border rounded px-2 py-1 text-sm"> 📋 Copy</button>
+        <button class="flex-1 bg-green-600 text-white rounded px-2 py-1 text-sm">📞 Call</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right: History -->
+  <aside class="lg:col-span-3 bg-white rounded-xl shadow">
+    <div class="flex justify-between items-center p-4 border-b">
+      <h2 class="font-semibold text-sm">Call History</h2>
+      <button class="bg-green-600 text-white text-sm px-3 py-1 rounded-full">Clear</button>
+    </div>
+    <ul class="max-h-96 overflow-y-auto text-sm divide-y">
+      <li class="p-3">Fire Service — 999 <span class="text-gray-500">11:35 AM</span></li>
+      <li class="p-3">National Emergency — 999 <span class="text-gray-500">11:36 AM</span></li>
+      <li class="p-3">Anti-Corruption — 106 <span class="text-gray-500">11:37 AM</span></li>
+    </ul>
+  </aside>
+
+</section>
+
+  
   <script>
     let heartCount = 0;
     let coinCount = 100;

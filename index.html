@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100 font-hind">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
+    <div class="flex items-center gap-2">
+      <img src="assets/logo.png" alt="logo" class="w-8 h-8">
+      <span class="font-bold text-xl text-emerald-800">Emergency Directory</span>
+    </div>
+    <div class="flex gap-6 items-center">
+      <span class="px-5 py-2 bg-emerald-100 font-bold rounded-full cursor-pointer"> <span id="heartCount">0 ❤️</span></span>
+      <span class="px-5 py-2 bg-emerald-100 font-bold  rounded-full cursor-pointer"> <span id="coinCount">100 💰</span></span>
+      <span class="px-5 py-2 bg-green-500 text-white font-semibold rounded-full cursor-pointer"> <span id="copyCount">2 Copy</span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-64 bg-gradient-to-r from-emerald-900 
+  via-emerald-700 
+  to-emerald-900  text-white flex flex-col justify-center items-center">
+    <img src="assets/logo-dark.png" class="w-16 mb-2">
+    <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
+    <p class="mt-2 text-lg">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+  </section>
+
+ 
+
+  <script>
+    let heartCount = 0;
+    let coinCount = 100;
+    let copyCount = 0;
+
+    const heartEl = document.getElementById("heartCount");
+    const coinEl = document.getElementById("coinCount");
+    const copyEl = document.getElementById("copyCount");
+    const historyList = document.getElementById("historyList");
+    const clearBtn = document.getElementById("clearHistory");
+
+    // Heart Button
+    document.querySelectorAll(".heartBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        heartCount++;
+        heartEl.textContent = heartCount;
+      });
+    });
+
+    // Copy Button
+    document.querySelectorAll(".copyBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        let number = btn.closest("div").parentElement.querySelector("span[id^='number']").textContent;
+        navigator.clipboard.writeText(number);
+        alert("Number Copied!");
+        copyCount++;
+        copyEl.textContent = copyCount;
+      });
+    });
+
+    // Call Button
+    document.querySelectorAll(".callBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        let service = btn.closest("div").parentElement.querySelector("span.font-bold").textContent;
+        let number = btn.closest("div").parentElement.querySelector("span[id^='number']").textContent;
+
+        if (coinCount >= 20) {
+          alert(`Calling ${service}: ${number}`);
+          coinCount -= 20;
+          coinEl.textContent = coinCount;
+
+          // Add to History
+          let time = new Date().toLocaleTimeString();
+          let li = document.createElement("li");
+          li.textContent = `${service} - ${number} at ${time}`;
+          historyList.appendChild(li);
+        } else {
+          alert("Not enough coins to make this call!");
+        }
+      });
+    });
+
+    // Clear History
+    clearBtn.addEventListener("click", () => {
+      historyList.innerHTML = "";
+    });
+  </script>
+
+</body>
+</html>

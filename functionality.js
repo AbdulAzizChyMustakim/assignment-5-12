@@ -1,16 +1,16 @@
-// ==================== Navbar Counts ====================
+// ==================== Navbar 
 let heartCount = 0;
-let copyCount = 2; // you already set 2 in HTML
+let copyCount = 2; 
 let coinCount = 100;
 
-// Get HTML elements
+//  HTML elements
 let heartCountEl = document.getElementById("heartCount");
 let copyCountEl = document.getElementById("copyCount");
 let coinCountEl = document.getElementById("coinCount");
 let historyList = document.querySelector("aside ul");
 let clearBtn = document.querySelector("aside button");
 
-// ==================== HEART ICON ====================
+// =========== HEART ICON ============
 let heartIcons = document.querySelectorAll(".card-heart");
 for (let i = 0; i < heartIcons.length; i++) {
   heartIcons[i].addEventListener("click", function () {
@@ -19,7 +19,7 @@ for (let i = 0; i < heartIcons.length; i++) {
   });
 }
 
-// ==================== CALL BUTTONS ====================
+// CALL BUTTONS =====
 let callButtons = document.querySelectorAll(".call-btn");
 for (let i = 0; i < callButtons.length; i++) {
   callButtons[i].addEventListener("click", function () {
@@ -56,7 +56,7 @@ for (let i = 0; i < callButtons.length; i++) {
   });
 }
 
-// ==================== COPY BUTTONS ====================
+// ============ COPY BUTTONS ===========
 let copyButtons = document.querySelectorAll(".copy-btn");
 for (let i = 0; i < copyButtons.length; i++) {
   copyButtons[i].addEventListener("click", function () {
@@ -75,7 +75,7 @@ for (let i = 0; i < copyButtons.length; i++) {
   });
 }
 
-// ==================== CLEAR HISTORY ====================
+// ============ CLEAR HISTORY ============
 clearBtn.addEventListener("click", function () {
   historyList.innerHTML = "";
 });
